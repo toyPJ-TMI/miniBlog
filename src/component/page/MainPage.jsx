@@ -17,8 +17,8 @@ const FullContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 60px auto;
-  width: 60%;
+  margin: 20px auto;
+  width: 100%;
 `;
 
 export default function MainPage() {
@@ -35,10 +35,9 @@ export default function MainPage() {
       <MainContainer>
         <PostList
           posts={data}
-          onClickItem={v => {
-            nav(`/post/${v.id}`);
-            console.log(v);
-          }}
+          onClickItem={(item) => {
+            nav(`/post/${item.id}`);
+        }}
         />
       </MainContainer>
     </FullContainer>

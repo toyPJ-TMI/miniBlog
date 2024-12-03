@@ -14,6 +14,8 @@ const PostItem = styled.div`
   :hover {
     background: lightgrey;
   }
+  width : 90%;
+  margin : 10px;
 `;
 
 const TitleText = styled.p`
@@ -23,10 +25,14 @@ const TitleText = styled.p`
 
 export default function PostListItems(props) {
   const {post, onClick} = props;
-  console.log(post);
+
+  console.log('PostListItems props.onClick:', onClick);
+  console.log('PostListItems props.post:', post);
   return (
     <PostItem onClick={onClick}>
-      <TitleText>{post.title}</TitleText>
+      <TitleText>
+        {post.id}.{post.title}
+        </TitleText>
     </PostItem>
   );
 }
