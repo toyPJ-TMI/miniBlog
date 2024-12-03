@@ -28,22 +28,22 @@
 
 ### 폴더 구성
 
-src
-├── component
-│ ├── list
-│ ├── PostListItems
-│ └── PostList
-│  
-│  
-│
-├── page
-│ ├── MainPage
-│ ├── PostWrite
-│ └── PostView
-│
-└── ui
-├── Button
-└── TextInput
+    src
+    ├── component
+    │ ├── list
+    │ ├── PostListItems
+    │ └── PostList
+    │
+    │
+    │
+    ├── page
+    │ ├── MainPage
+    │ ├── PostWrite
+    │ └── PostView
+    │
+    └── ui
+    ├── Button
+    └── TextInput
 
 ---
 
