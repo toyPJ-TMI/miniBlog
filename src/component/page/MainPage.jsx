@@ -8,17 +8,20 @@ import data from '../../data.json';
 const FullContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  width: 60%;
   align-items: flex-start;
   justify-content: center;
+  margin: 0 auto;
+  width: 80%;
 `;
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 60px auto;
-  width: 60%;
+  align-items: flex-start;
+  justify-content: center;
+  /* margin: 20px auto; */
+  width: 100%;
+  padding: 12px;
 `;
 
 export default function MainPage() {
@@ -29,15 +32,14 @@ export default function MainPage() {
       <Button
         title={'글 작성하기'}
         onClick={() => {
-          nav('/post-write');
+          nav('/post/write');
         }}
       />
       <MainContainer>
         <PostList
           posts={data}
-          onClickItem={v => {
-            nav(`/post/${v.id}`);
-            console.log(v);
+          onClickItem={item => {
+            nav(`/post/${item.id}`);
           }}
         />
       </MainContainer>

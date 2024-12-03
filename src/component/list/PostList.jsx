@@ -9,6 +9,7 @@ const PostLists = styled.div`
   align-items: center;
   border-radius: 8px;
   border: 1px solid grey;
+  width: 90%;
 `;
 
 export default function PostList(props) {
@@ -16,7 +17,7 @@ export default function PostList(props) {
 
   return (
     <PostLists>
-      {posts.map((post, index) => {
+      {posts.map(post => {
         return (
           <PostListItems
             key={post.id}

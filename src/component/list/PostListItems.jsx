@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PostView from '../page/PostView';
 
 const PostItem = styled.div`
   display: flex;
@@ -14,6 +15,8 @@ const PostItem = styled.div`
   :hover {
     background: lightgrey;
   }
+  width: 90%;
+  margin: 10px;
 `;
 
 const TitleText = styled.p`
@@ -23,10 +26,21 @@ const TitleText = styled.p`
 
 export default function PostListItems(props) {
   const {post, onClick} = props;
-  console.log(post);
+
+  if (!post) {
+    console.log('PostView data:', post);
+    return (
+      <PostView>
+        <TitleText>게시글 데이터를 불러올 수 없습니다.</TitleText>
+      </PostView>
+    );
+  }
+
   return (
     <PostItem onClick={onClick}>
-      <TitleText>{post.title}</TitleText>
+      <TitleText>
+        {post.id}.{post.title}
+      </TitleText>
     </PostItem>
   );
 }
