@@ -1,16 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TextInputs = styled.div`
+const TextInputs = styled.textarea`
   border-radius: 8px;
   border: 1px solid grey;
   padding-left: 8px;
   width: 50%;
-  ${props =>
-    props.height &&
-    `
-        height: ${props.height}px;
-    `};
+  height: ${props => (props.height ? `${props.height}px` : 'auto')};
   font-size: 16px;
 `;
 
